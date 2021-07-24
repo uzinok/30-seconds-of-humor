@@ -1,9 +1,94 @@
-// // настраиваемые колонки
 // @import './grid.less';
 
-@import "variable.less";
-@import "scaffolding.less";
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
 
-@import "blocks/header.less";
+img {
+    max-width: 100%
+}
 
-@import "blocks/footer.less";
+.big {
+    text-transform: uppercase
+}
+
+.red {
+    color: #dc143c
+}
+
+.slider {
+    position: relative;
+    margin: auto;
+    padding: 0 20px;
+    list-style: none;
+    width: 100vh;
+    height: 100vh;
+    box-sizing: border-box;
+    transition: background-color 200ms ease-in-out
+}
+
+.slider li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vh;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 40px;
+    line-height: 1.4;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+
+    opacity: 0;
+    transition: opacity 200ms ease-in-out
+}
+
+.slider li.active {
+    z-index: 1;
+    opacity: 1
+}
+
+.slider li img {
+    position: absolute;
+    width: auto;
+    height: 33vh;
+    bottom: 0;
+    right: 0;
+}
+
+.top-left {
+    top: 10px;
+    left: 10px;
+}
+
+.top-right {
+    top: 10px;
+    right: 10px;
+}
+
+.bottom-left {
+    bottom: 10px;
+    left: 10px;
+}
+
+.bottom-right {
+    bottom: 10px;
+    right: 10px;
+}
+
+br {
+    height: 0;
+}
+
+.db {
+    display: block;
+}
